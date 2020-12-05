@@ -1,3 +1,35 @@
 body {
-  background-color: grey;
+  background-color: lightgrey;
+}
+
+li {
+  list-style: none;
+}
+.description {
+  display: none;
+}
+div img {
+max-width: 50%;
+height: auto;
+}
+.myButton {
+color: rgb(255, 255, 255);
+font-size: 15px;
+line-height: 28px;
+padding: 5px;
+border-radius: 16px;
+background-image: radial-gradient(at center center, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 35%, rgb(20, 78, 117) 100%);
+box-shadow: rgb(0, 0, 0) 11px 5px 15px 5px;
+border: 2px solid rgb(28, 110, 164);
+display: block;
+margin-left: 50%;
+margin-top: -35px;
+}
+.myButton:hover {
+background: #1C6EA4; }
+.myButton:active {
+background: #144E75; }
+
+div {
+  margin: 40px;
 }
