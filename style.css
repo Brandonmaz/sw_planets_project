@@ -1,35 +1,121 @@
-body {
-  background-color: lightgrey;
-}
 
-li {
+body {
+  background: white;
+  background-image: url("imgs/stars2.jpg");
+}
+h3 {
+font-family: 'Star Jedi Hollow', sans-serif;
+font-size: 50px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #FFE81F;
+font-weight: 700;
+font-style: italic;
+font-variant: small-caps;
+text-transform: capitalize;
+}
+.planetName {
+  display: inline-block;
+  flex-direction: row;
+  margin: 5px;
+}
+ul {
   list-style: none;
+}
+li {
+  color: #1C6EA4;
 }
 .description {
   display: none;
 }
-div img {
-max-width: 50%;
-height: auto;
-}
-.myButton {
+button {
 color: rgb(255, 255, 255);
-font-size: 15px;
-line-height: 28px;
-padding: 5px;
-border-radius: 16px;
-background-image: radial-gradient(at center center, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 35%, rgb(20, 78, 117) 100%);
-box-shadow: rgb(0, 0, 0) 11px 5px 15px 5px;
+font-size: 16px;
+line-height: 16px;
+padding: 6px;
+border-radius: 10px;
+font-family: Georgia, serif;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%);
+box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
 border: 2px solid rgb(28, 110, 164);
-display: block;
-margin-left: 50%;
-margin-top: -35px;
+outline: none;
 }
-.myButton:hover {
-background: #1C6EA4; }
-.myButton:active {
-background: #144E75; }
+.button:hover {
+background: #1C6EA4;
+}
+.button:active {
+background: #144E75;
+}
 
-div {
-  margin: 40px;
+.text button {
+  margin: 5px;
 }
+.container {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > img {
+  width: 50%;
+}
+/* ===================================== */
+.carousel-container {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.carousel-images {
+  width: 80%;
+  background: black;
+  padding: 10px;
+  border-radius: 1000px;
+}
+.carousel-images img {
+  width: 100%;
+  border-radius: 1000px;
+  display: none;
+}
+.carousel-images img:first-of-type {
+  display: block;
+}
+.carousel-images div{
+  /* background-color: red; */
+  background-image: url("imgs/stars2.jpg");
+  border-radius: 100px;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+.carousel-button {
+  align-self: center;
+  background: #1C6EA4;
+  color: #888;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px #144E75;
+}
+.carousel-button:hover {
+  cursor: pointer;
+  background: red;
+  box-shadow: 1px 1px red;
+  color: white;
+}
+
+@import url("http://fonts.cdnfonts.com/css/starjedi-special-edition");
+
+/* font-family: 'StarJedi Special Edition', sans-serif;
+font-family: 'Star Jedi', sans-serif;
+font-family: 'Star Jedi Hollow', sans-serif;
+font-family: 'Star Jedi Outline', sans-serif;
+font-family: 'Star Jedi Logo DoubleLine1', sans-serif;
+font-family: 'Star Jedi Logo DoubleLine2', sans-serif;
+font-family: 'Star Jedi Logo MonoLine', sans-serif; */

@@ -1,0 +1,81 @@
+body {
+  background: grey;
+}
+ul {
+  list-style: none;
+}
+.description {
+  display: none;
+}
+.button {
+color: rgb(255, 255, 255);
+font-size: 16px;
+line-height: 16px;
+padding: 6px;
+border-radius: 10px;
+font-family: Georgia, serif;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%);
+box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+border: 2px solid rgb(28, 110, 164);
+display: inline-block;
+}
+.button:hover {
+background: #1C6EA4;
+}
+.button:active {
+background: #144E75;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > img {
+  width: 50%;
+}
+/* ===================================== */
+.carousel-container {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.carousel-images {
+  width: 80%;
+  background: #faBd8e;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px #f2cd99;
+}
+.carousel-images img {
+  width: 100%;
+  border-radius: 10px;
+  display: none;
+}
+.carousel-images img:first-of-type {
+  display: block;
+}
+.carousel-button {
+  align-self: center;
+  background: #f2cd99;
+  color: #888;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px #faBd8e;
+}
+.carousel-button:hover {
+  cursor: pointer;
+  background: #faBd8e;
+  box-shadow: 1px 1px #f2cd99;
+  color: white;
+}
