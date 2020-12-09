@@ -57,57 +57,54 @@ $(() => {
         let planetName = data.results[i].name
         // console.log(data.results[i].name)
 
-        const $button = $('<button class="openModal">').attr('id', planetName).text(planetName)
-        $div.append($button)
+
+
+        const $name = $('<div>').addClass('planetName')
+        $div.append($name)
+
+        // const $button = $('<button>').text(planetName).addClass('i')
+        // $name.append($button)
+        const $button = $('<button>').addClass('openModal').text(planetName)
+        $name.append($button)
+
+        const $b = $('<div>').appendTo('body')
 
         const $divModal = $('<div>').attr('id', 'modal')
-        $div.append($divModal)
+        $b.append($divModal)
 
-        const $divModalText = $('<div>').attr('id', 'modal-textbox')
+        const $divModalText = $('<div>').addClass('modal-textbox')
         $divModal.append($divModalText)
 
-        const $a = $('<a>').addClass('close').attr('href', '#').text('Close').appendTo($divModalText)
+        const $a = $('<button>').addClass('close').attr('href', '#').text('Close').appendTo($divModalText)
+
+
+        const $ul = $('<ul>').attr('id', 'planet')
+        $name.append($ul)
+
+
 
         for (let j = 1; j < 9; j++) {
 
           let planetInfoName = Object.keys(data.results[j])
-          // console.log(planetInfoName);
           // console.log(planetInfo[planetInfoName[j]])
 
-          // const $description =
-          //   $('<li>').addClass('description').text(`${planetInfoName[j]}: ${planetInfo[planetInfoName[j]]}`)
-          // console.log(`${planetInfoName[j]}: ${planetInfo[planetInfoName[j]]}`)
-
-          const $li = $('<li>').addClass('description').text(`${planetInfoName[j]}: ${planetInfo[planetInfoName[j]]}`).appendTo($divModalText)
-          console.log($li);
+          const $li = $('<li>').text(`${planetInfoName[j]}: ${planetInfo[planetInfoName[j]]}`).appendTo($divModalText)
 
           // this is my modal section where all the planet info is and my working buttons
-
-          // const $openModal =
-
+          const $openBtn = $('.openModal')
           const $modal = $('#modal')
           const $closeBtn = $('.close')
 
-          $($button).on('click', () => {
-            $modal.empty()
-            $modal.append($div)
-            $('#modal').removeClass()
-          })
+          const openModal = (event) => {
+            // event.currentTarget
+            $modal.css('display', 'block')
+          }
+          const closeModal = () => {
+            $modal.css('display', 'none')
+          }
+          $openBtn.on('click', openModal)
 
-
-        //   const openModal = (event) => {
-        //     $modal.css('display', 'block')
-        //   }
-        //   const closeModal = () => {
-        //     $modal.css('display', 'none')
-        //   }
-        //   $button.on('click', (openModal) => {
-        //     $modal.css('display', 'block')
-        //   }
-        // )
-        //   $closeBtn.on('click', (closeModal) => {
-        //     $modal.css('display', 'none')
-        //   })
+          $a.on('click', closeModal)
 
 
           // $ul.append($description)
