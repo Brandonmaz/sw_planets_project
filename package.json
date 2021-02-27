@@ -1,0 +1,19 @@
+{
+  "name": "sw_planets_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "appfinal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brandonmaz/sw_planets_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brandonmaz/sw_planets_project/issues"
+  },
+  "homepage": "https://github.com/Brandonmaz/sw_planets_project#readme"
+}
